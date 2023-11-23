@@ -1,0 +1,100 @@
+*{
+    margin: 0px; font-family: 'Segoe UI', sans-serif;
+}
+
+html, body{width: 100vw;}
+a{text-decoration: none;}
+
+.icon{
+    background-image: url(../media/sprite3.png);
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 66px;
+    display:inline-block;
+    background-color: rgba(65, 64, 64, 0.669);
+}
+
+#vidbg{ 
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index:-1; 
+}
+
+nav{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
+    box-shadow: 0px 8px 16px 0px rgba(196, 240, 196, 0.2);
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.links a{
+    margin-left: 1vw; color:rgb(0, 0, 0);
+}
+
+.pagetitle{
+    margin-left: 1vw; color:rgb(0, 0, 0);
+}
+
+.banner{
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 10vw;
+   
+    text-shadow:5px 2px rgba(34, 35, 34, 0.474);
+    padding: 5vw;
+}
+
+.bannerhead{
+    font-size: 100pt;
+    font-weight: 700;
+}
+
+#soundcloud{background-position: -587px -72px;}
+#twitter{background-position: -66px -72px}
+#fb{background-position: -439px -146px;}
+#skype{background-position: -365px -147px;}
+
+footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(65, 64, 64, 0.669);
+    width: 100vw;
+}
+
+@media screen and (max-width: 600px){
+    nav{ 
+        position: relative; background-color: rgba(0, 0, 0, 0.669);
+    }
+
+    .pagetitle{
+        padding: 1vw;
+        color: white;
+        transition: .5s;
+    }
+    .links{
+        display: none;
+        z-index: 1;
+        position: absolute;
+        background-color: rgb(0, 0, 0, 0.669);
+        min-width: 100vw;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.728);
+        transition: .5s;
+    }
+    .links a{
+        color: rgb(252, 252, 252);
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        display: block;
+        transition: .5s;
+        margin-left: 0;
+        padding-left: 1vh;
+    }
+    
+    .links a:hover{background-color: #ddd; transition: .5s;}
+    nav:hover .links{display: block; transition: .5s;}
+    nav:hover .pagetitle{background-color: #2e73eb; transition: .5s;}
+}
